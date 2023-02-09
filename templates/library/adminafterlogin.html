@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<style media="screen">
+ .hero-image {
+  background-image: url("photographer.JPG"); /* The image used */
+  background-color: #87CEEB; /* Used if the image is unavailable */
+  height: 500px; /*You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.hero-image2{
+  background-image: url("photographer.JPG"); /* The image used */
+  background-color: #ff0000; /* Used if the image is unavailable */
+  /*height: 500px;You must set a specified height */
+ /* background-position: center;  Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.jumbotron{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.jumbotron h1{
+  text-align: center;
+}
+
+
+</style>
+  </head>
+  <body>
+    {% include "library/navbaradmin.html" %}
+  
+   
+    <div class="jumbotron" >
+      <div class="hero-image2">
+    <h3 class="p-3 mb-2 bg-#ff0000 text-white" style = 'font-size: 30px;text-align:center;'>Hello {{user.first_name}} !</h3>
+    <h3 class="p-3 mb-2 bg-#ff0000 text-white" style = 'font-size: 30px;text-align:center;'><p>As you are Admin, you can add a book to library, view available book in library,
+       Issue books to students,
+      View issued book to students and many more ... !
+    </p>
+  </h3>
+  <div class="hero-image">
+    <!--<hr class="my-4">-->
+      <h3 class="p-3 mb-2 bg-#000000 text-black" style = 'font-size: 30px;text-align:center;'>Option Available For Admin !</h3>
+    <div class="options" style="text-align:center">
+      
+      <a href="addbook" class="btn btn-primary btn-danger active" style="border-radius: 0%;" role="button" aria-pressed="true">Add Book To Library</a><br><br>
+      <a href="viewbook" class="btn btn-primary btn-danger active" style="border-radius: 0%;" role="button" aria-pressed="true">View Available Book</a><br><br>
+      <a href="issuebook" class="btn btn-primary btn-danger active" style="border-radius: 0%;" role="button" aria-pressed="true">Issue New Book</a><br><br>
+      <a href="viewissuedbook" class="btn btn-primary btn-danger active" style="border-radius: 0%;" role="button" aria-pressed="true">View Issued Book</a><br><br>
+      <a href="viewstudent" class="btn btn-primary btn-danger active" style="border-radius: 0%;" role="button" aria-pressed="true">View Student</a>
+    </div>
+    </div>
+  </div>
+    {% include "library/footer.html" %}
+  </body>
+</html>
